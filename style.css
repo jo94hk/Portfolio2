@@ -67,5 +67,6 @@ header {
 }
 
 .home-content p {
-    fo
+  font-size: 16px;
+  margin: 20px 0 40px;
 }
