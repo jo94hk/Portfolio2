@@ -132,6 +132,21 @@ header {
   justify-content: space-between;
   width: 345px;
   height: 50px;
+  position: relative;
+}
+.home-content .btn-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 110%;
+  background-color: #081b29;
+  /* 로고만 가려줌 */
+  animation: showRight 1s ease forwards;
+  /* 애니메이션 1.9초후에 시작 */
+  animation-delay: 1.9s;
+  z-index: 2;
 }
 
 .btn-box a {
