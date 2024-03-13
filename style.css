@@ -8,7 +8,7 @@
 }
 /* 헤더 */
 body {
-  background-color: #081b29;
+  color: #ededed;
 }
 header {
   position: fixed;
@@ -28,6 +28,21 @@ header {
   color: #ededed;
   text-decoration: none;
   font-size: 600;
+  position: relative;
+  /* 로고만 가려줌 */
+}
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #081b29;
+  /* 로고만 가려줌 */
+  animation: showRight 1s ease forwards;
+  /* 애니메이션 0.4초후에 시작 */
+  animation-delay: 0.4s;
 }
 
 .navbar a {
@@ -173,7 +188,7 @@ header {
   width: 40%;
   height: 100%;
   background-color: transparent;
-  /* border: 2px solid red; */
+
   transition: 3s;
 }
 
@@ -181,4 +196,12 @@ header {
   background-color: #081b29;
   /* 투명도 0일때 완전투명 1일때 불투명 */
   opacity: 0.7;
+}
+
+/* 애니메이션 제일 밑에 만듬 */
+@keyframes showRight {
+  /* 최종 가로길이를 0으로 만드는 애니메이션 */
+  100% {
+    width: 0;
+  }
 }
